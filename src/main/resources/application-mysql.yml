@@ -1,0 +1,25 @@
+# Perfil MySQL: base de datos relacional principal (entrega)
+# Uso: mvn spring-boot:run "-Dspring-boot.run.profiles=mysql"
+#  o:  java -jar machan-backend.jar --spring.profiles.active=mysql
+spring:
+  config:
+    activate:
+      on-profile: mysql
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:machan_store}?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Santiago&characterEncoding=UTF-8
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: false
+
+  h2:
+    console:
+      enabled: false
