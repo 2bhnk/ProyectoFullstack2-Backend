@@ -6,5 +6,5 @@ Integrantes:
 
 # ESTE REPOSITORIO POSEE SOLAMENTE EL BACKEND.
 
-Para descargar/clonar el proyecto backend dirigirse a:
+Para descargar/clonar el proyecto frontend dirigirse a:
 https://github.com/2bhnk/ProyectoFullstack2-Frontend
